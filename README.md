@@ -49,6 +49,8 @@ I'm lucky enough to have an O'Reilly media subscription and I am working my way 
 
 I'm also doing all setup before, so I can just jump in and read and code... we'll see how that goes. :) 
 
+Update... found out how to read in a line at a time with nodejs :) thanks to Stack Overflow (of course) (https://stackoverflow.com/questions/6156501/read-a-file-one-line-at-a-time-in-node-js)
+
 ## <a name="day1">Day 1</a>
 ## <a name="day2">Day 2</a>
 ## <a name="day3">Day 3</a>
