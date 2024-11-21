@@ -47,6 +47,8 @@ This year when I get truly stuck I will seek out help, but my code will be my ow
 
 I'm lucky enough to have an O'Reilly media subscription and I am working my way through the Algorithms course by Robert Sedgewick & Kevin Wayne, relearning everything I've forgotten & not used in my day-to-day. :) 
 
+I'm also doing all setup before, so I can just jump in and read and code... we'll see how that goes. :) 
+
 ## <a name="day1">Day 1</a>
 ## <a name="day2">Day 2</a>
 ## <a name="day3">Day 3</a>
