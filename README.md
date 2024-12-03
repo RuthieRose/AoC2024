@@ -73,7 +73,16 @@ Day 2 part 1 was not pretty fair with a few if conditions. Part 2 added a little
 Overall, this is taking me longer than it normally would because of Java's strict typing limitations, and I'm also not super familiar with all of the Java collection methods or any libraries. It is nice because I'm debugging before I get the answer rather than after--I do have to give credit there. It will be interesting to see how much I can pick up in future days or if I will be switching back to Python. :D
 
 [back to top](#top)
+
 ## <a name="day3">Day 3</a>
+
+Part 1 was fine. Just how to get regex in Java. Solved that in minutes.
+
+;ajdsf;kafdjkla;dkj;f
+Part 2. 
+The input. !!!!!
+I lost two hours trying to figure out if there was something wrong with my regex or my data structures. I broke it down into smaller pieces (that's why I have 3c). As it turns out, the new lines in the puzzle input themselves were messing with the regex pattern. As soon as I cleaned up the input to be one line, I had the right answer. 
+
 [back to top](#top)
 ## <a name="day4">Day 4</a>
 [back to top](#top)
