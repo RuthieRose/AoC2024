@@ -84,7 +84,11 @@ The input. !!!!!
 I lost two hours trying to figure out if there was something wrong with my regex or my data structures. I broke it down into smaller pieces (that's why I have 3c). As it turns out, the new lines in the puzzle input themselves were messing with the regex pattern. As soon as I cleaned up the input to be one line, I had the right answer. 
 
 [back to top](#top)
+
 ## <a name="day4">Day 4</a>
+
+Today's puzzle was more about understanding the logic than anything else. I'm still super slow coding in Java but I really took the time to make notes about how to organize the logic. I got the answer correct first time for both parts. If I had more time I perhaps could have optimized the data structure better for Part 2 but today was not about optimization. It was about being careful and detail-oriented with the functions and I'm super happy I didn't make any stupid mistakes. I'm also happy that the puzzle didn't wrap, but that may be saved for another day :D 
+
 [back to top](#top)
 ## <a name="day5">Day 5</a>
 [back to top](#top)
