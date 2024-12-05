@@ -90,7 +90,13 @@ I lost two hours trying to figure out if there was something wrong with my regex
 Today's puzzle was more about understanding the logic than anything else. I'm still super slow coding in Java but I really took the time to make notes about how to organize the logic. I got the answer correct first time for both parts. If I had more time I perhaps could have optimized the data structure better for Part 2 but today was not about optimization. It was about being careful and detail-oriented with the functions and I'm super happy I didn't make any stupid mistakes. I'm also happy that the puzzle didn't wrap, but that may be saved for another day :D 
 
 [back to top](#top)
+
 ## <a name="day5">Day 5</a>
+
+This was an interesting problem to solve. For part 1 I opted for a data structure that would use the higher page number as the key and the lower page numbers would be the values in an array. I iterated through each set of pages, checking to see if each page had a required page before it that was after it in sequence. If it did, then that set would not count toward the total.
+
+Part 2 I had to really think about how to sort and hope that it was not a complex sort. I did a simple swap and the trick was to backtrack in the array so as to keep any changes but also institute any additional changes that needed to be made.
+
 [back to top](#top)
 ## <a name="day6">Day 6</a>
 [back to top](#top)

@@ -108,7 +108,7 @@ public class Day4 {
  public static int horizontalCount(Map<String, List<String>> coordinates) {
 
     int total = 0;
-    List X_coordinates = coordinates.get("X");
+    List<String> X_coordinates = coordinates.get("X");
     for (int i = 0; i < X_coordinates.size(); i++) {
         String X = (String) X_coordinates.get(i);
         String[] x_coord = X.split("_");
@@ -133,7 +133,7 @@ public class Day4 {
  public static int horizontalBackwardsCount(Map<String, List<String>> coordinates) {
 
     int total = 0;
-    List S_coordinates = coordinates.get("S");
+    List<String> S_coordinates = coordinates.get("S");
     for (int i = 0; i < S_coordinates.size(); i++) {
         String S = (String) S_coordinates.get(i);
         String[] s_coord = S.split("_");
@@ -158,7 +158,7 @@ public class Day4 {
  public static int verticalCount(Map<String, List<String>> coordinates) {
 
         int total = 0;
-        List X_coordinates = coordinates.get("X");
+        List<String> X_coordinates = coordinates.get("X");
         for (int i = 0; i < X_coordinates.size(); i++) {
             String X = (String) X_coordinates.get(i);
             String[] x_coord = X.split("_");
@@ -182,7 +182,7 @@ public class Day4 {
 public static int verticalBackwardsCount(Map<String, List<String>> coordinates) {
 
     int total = 0;
-    List S_coordinates = coordinates.get("S");
+    List<String> S_coordinates = coordinates.get("S");
     for (int i = 0; i < S_coordinates.size(); i++) {
         String S = (String) S_coordinates.get(i);
         String[] s_coord = S.split("_");
@@ -207,7 +207,7 @@ public static int verticalBackwardsCount(Map<String, List<String>> coordinates) 
  public static int diagonalRightUp(Map<String, List<String>> coordinates) {
 
     int total = 0;
-    List S_coordinates = coordinates.get("S");
+    List<String> S_coordinates = coordinates.get("S");
     for (int i = 0; i < S_coordinates.size(); i++) {
         String S = (String) S_coordinates.get(i);
         String[] s_coord = S.split("_");
@@ -235,7 +235,7 @@ public static int verticalBackwardsCount(Map<String, List<String>> coordinates) 
  public static int diagonalLeftUp(Map<String, List<String>> coordinates) {
 
     int total = 0;
-    List S_coordinates = coordinates.get("S");
+    List<String> S_coordinates = coordinates.get("S");
     for (int i = 0; i < S_coordinates.size(); i++) {
         String S = (String) S_coordinates.get(i);
         String[] s_coord = S.split("_");
@@ -263,7 +263,7 @@ public static int verticalBackwardsCount(Map<String, List<String>> coordinates) 
  public static int diagonalRightDown(Map<String, List<String>> coordinates) {
 
     int total = 0;
-    List X_coordinates = coordinates.get("X");
+    List<String> X_coordinates = coordinates.get("X");
     for (int i = 0; i < X_coordinates.size(); i++) {
         String X = (String) X_coordinates.get(i);
         String[] x_coord = X.split("_");
@@ -291,7 +291,7 @@ public static int verticalBackwardsCount(Map<String, List<String>> coordinates) 
  public static int diagonalLeftDown(Map<String, List<String>> coordinates) {
 
     int total = 0;
-    List X_coordinates = coordinates.get("X");
+    List<String> X_coordinates = coordinates.get("X");
     for (int i = 0; i < X_coordinates.size(); i++) {
         String X = (String) X_coordinates.get(i);
         String[] x_coord = X.split("_");

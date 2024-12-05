@@ -76,7 +76,7 @@ public class Day4b {
 
     int total = 0;
 
-    List A_coordinates = coordinates.get("A");
+    List<String> A_coordinates = coordinates.get("A");
     for (int i = 0; i < A_coordinates.size(); i++) {
         String A = (String) A_coordinates.get(i);
         String[] A_coord = A.split("_");
