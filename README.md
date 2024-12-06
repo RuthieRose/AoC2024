@@ -98,7 +98,15 @@ This was an interesting problem to solve. For part 1 I opted for a data structur
 Part 2 I had to really think about how to sort and hope that it was not a complex sort. I did a simple swap and the trick was to backtrack in the array so as to keep any changes but also institute any additional changes that needed to be made.
 
 [back to top](#top)
+
 ## <a name="day6">Day 6</a>
+
+Today's focus was breaking this down into small enough parts to code an implementation. Part 1 was simple to understand and not so simple to execute. I would have wanted to put anything repeated in a function, but getting to work on time is also important. :) 
+
+Part 2 I just kind of stared at for a few minutes. I love that he does examples but I couldn't see any visual rhyme or reason that I could then code to adding in obstacles. I zoomed out a little and thought if I were to tackle it programmatically using a simple (ie brute force) solution, I would just check every point to see if it created a loop. I defined a loop as any move count greater than twice the area of the coordinate grid. The part I was unsure of was refactoring my code to make part 1 a separate function so I could iterate through the grid. 
+
+I had one small hiccup where my move count was outside my while loop. Once I refactored that I was able to get the solution quickly. I'm sure there's a great algorithm for this, and maybe I will have time to learn it this weekend. :) We'll see how hard the next challenges are. 
+
 [back to top](#top)
 ## <a name="day7">Day 7</a>
 [back to top](#top)
