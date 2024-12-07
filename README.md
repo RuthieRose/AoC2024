@@ -109,7 +109,15 @@ I had one small hiccup where my move count was outside my while loop. Once I ref
 
 [back to top](#top)
 ## <a name="day7">Day 7</a>
+
+Today's puzzle was super cool, probably my favorite of them all so far this year. For part 1 in getting all of the combinations for multiplying and adding, I knew exactly what I needed to do, but wasn't sure how to code it. I did a google search and the AI snippet produced the use of bitwise operators. I've played around a little with learning them, so decided to try it out, of course modifying the code that was given to work with my situation. Later today, after completing part 2 and taking care of errands and some holiday things, I really wanted to dig into understanding why it worked so well. I input a code snippet into ChatGPT and found it educational. I included our conversation in the Day 7 folder (https://github.com/RuthieRose/AoC2024/tree/main/Day7/ChatGPTconvo.txt). It is pretty cool and I want to practice more with bitwise operations. 
+
+With the addition of a third operator, I opted for refactoring to a recursive call to generate the sequences. This was also inspired by a google search response. Usually Stack Overflow is my go-to, but this was readable so I opted to adapt it for my purposes. 
+
+I've been laughing at all of the Advent of Code memes on Reddit but one thing I'm not getting is some of these taking a long time to run. I know I'm brute forcing this--the last run of part 2 took 2703 milliseconds. Is Java just *that* fast? If so... between the type safety saving me a lot of time debugging and the speed... this is quickly becoming my preferred language... I'm too ADHD for Python I think....
+
 [back to top](#top)
+
 ## <a name="day8">Day 8</a>
 [back to top](#top)
 ## <a name="day9">Day 9</a>

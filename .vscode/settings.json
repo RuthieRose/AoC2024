@@ -1,3 +1,5 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.dependency.syncWithFolderExplorer": false,
+    "java.project.explorer.showNonJavaResources": false
 }
