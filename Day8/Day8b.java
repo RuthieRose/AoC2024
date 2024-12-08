@@ -48,6 +48,7 @@ public class Day8b {
                 // Check if this point lies on the line
                 if (pointSlope == slope) {
                     // If it does, add the point to the set
+                    // Hey today I learned that you can just concatenate without value of...
                     String coordinate = px + "_" + py;
                     nodes.add(coordinate);
                 }
