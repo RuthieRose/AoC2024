@@ -119,6 +119,9 @@ I've been laughing at all of the Advent of Code memes on Reddit but one thing I'
 [back to top](#top)
 
 ## <a name="day8">Day 8</a>
+
+Whew, this was fairly straightforward but getting the math right was a tricky. I got a little help on the exact math, but the real catch on part 2 was getting those extra anti-nodes accounted for and added. :) 
+
 [back to top](#top)
 ## <a name="day9">Day 9</a>
 [back to top](#top)
