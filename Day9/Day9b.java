@@ -47,13 +47,24 @@ public class Day9b {
 
         return spaces;
     }
+
+    public static int locateFirstEmptyBlock(int idx, List<String> filesystem) {
+        int p = 0;
+        for (int i = idx; i < filesystem.size(); i++) {
+            if (filesystem.get(i).equals(".")) {
+                p = i;
+                break;
+            }
+        }
+        return p;
+    }
     
     public static void main (String[] args) throws IOException {
 
         long total_checksum = 0L;
         int fileNumCount = 0;
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("Day9/sample.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("Day9/input.txt"))) {
             while(reader.ready()) {
                 String line = reader.readLine();
 
@@ -81,55 +92,50 @@ public class Day9b {
 
                 List<String> aux = new ArrayList<String>();
 
-                List<Integer> indicesOfEmptyBlocks = new ArrayList<Integer>();
-                for (int i = 0; i < filesystem.size(); i++) {
-                    String item = filesystem.get(i);
-                    String itemLeft = i > 0 ? filesystem.get(i-1) : "";
-
-                    if (item.equals(".")) {
-                        if (itemLeft.equals("") || !itemLeft.equals(".")) indicesOfEmptyBlocks.add(i);
-                    }
-                }
-
-                System.out.println(indicesOfEmptyBlocks.toString());
-
                 int currentId = fileNumCount - 1;
-                int emptyBlocksPointer = 0;
-                System.out.println("currentId: " + currentId);
+                
+                //System.out.println("currentId: " + currentId);
                 // while currentId is greater than 0 AND current available empty block is to the left of the currentId
 
                 while (currentId >= 0) {
                     
-                    System.out.println("Inside while block");
+                    //System.out.println("Inside first while block");
 
                     // get currentId
                     String currentIdString = String.valueOf(currentId);
-                    System.out.println(currentIdString);
+                    //System.out.println(currentIdString);
 
                     // get first index and last index and total block length
                     int firstIndexOfCurrentId = filesystem.indexOf(currentIdString);
                     int lastIndexOfCurrentId = filesystem.lastIndexOf(currentIdString);
+                    //System.out.println(filesystem.toString());
+                    //System.out.println("The first index of currentId " + currentId + ": " + firstIndexOfCurrentId);
+                    //System.out.println("The last index of currentId " + currentId + ": " + lastIndexOfCurrentId);
+
                     int numBlocksNeededForCurrentId = lastIndexOfCurrentId - firstIndexOfCurrentId + 1;
 
-                    System.out.println(firstIndexOfCurrentId);
-                    System.out.println(lastIndexOfCurrentId);
-                    System.out.println(numBlocksNeededForCurrentId);
+                    //System.out.println("Number of blocks needed for currentId " + currentId + ": "  + numBlocksNeededForCurrentId);
 
                     // search for blocks that will accommodate the id block length
-                    int startOfEmptyBlock = indicesOfEmptyBlocks.get(emptyBlocksPointer);
-                    int availableBlockCount = getSpacesInEmptyBlock(startOfEmptyBlock, filesystem);
+                    int emptyBlocksPointer = locateFirstEmptyBlock(0, filesystem);
+                    while (emptyBlocksPointer < firstIndexOfCurrentId) {
 
-                    System.out.println("blocks available: " + availableBlockCount);
+                        //System.out.println("The emptyBlocksPointer is at: " + emptyBlocksPointer);
+                        int availableBlockCount = getSpacesInEmptyBlock(emptyBlocksPointer, filesystem);
 
-                    // relocate the items 
-                    if (numBlocksNeededForCurrentId <= availableBlockCount) {
-                        for (int i = startOfEmptyBlock, j = firstIndexOfCurrentId; j <= lastIndexOfCurrentId; i++, j++) {
-                            filesystem.set(i,currentIdString);
-                            filesystem.set(j, ".");
+                        //System.out.println("blocks available: " + availableBlockCount);
+
+                        // relocate the items 
+                        if (numBlocksNeededForCurrentId <= availableBlockCount) {
+                            for (int i = emptyBlocksPointer, j = firstIndexOfCurrentId; j <= lastIndexOfCurrentId; i++, j++) {
+                                filesystem.set(i,currentIdString);
+                                filesystem.set(j, ".");
+                            }
+                            break;
                         }
-                        emptyBlocksPointer += 1;
+                        else emptyBlocksPointer = locateFirstEmptyBlock(emptyBlocksPointer+1, filesystem);
                     }
-
+                
                     currentId -=1 ;
                 }
 
@@ -138,14 +144,16 @@ public class Day9b {
                 // System.out.println(aux.toString());
                 // compute checksum
 
-                for (int i = 0; i < aux.size(); i++) {
-                    long item = Integer.parseInt(aux.get(i));
-                    long total = item * i;
-                    total_checksum += total;
-
+                for (int i = 0; i < filesystem.size(); i++) {
+                    String fsItem = filesystem.get(i);
+                    if (!fsItem.equals(".")) {
+                        long item = Integer.parseInt(filesystem.get(i));
+                        long total = item * i;
+                        total_checksum += total;
+                    }
                 }
 
-                System.out.println(filesystem);
+                //System.out.println(filesystem);
             };    
         }
 

@@ -124,6 +124,9 @@ Whew, this was fairly straightforward but getting the math right was a tricky. I
 
 [back to top](#top)
 ## <a name="day9">Day 9</a>
+
+I enjoy a good string parsing that requires me to flip around indices and values lol. I misread the instructions for the second part and lost some time deriving logic as a result (you can see though the git commits how this changed). I finally got it resolved and submitted. :) 
+
 [back to top](#top)
 ## <a name="day10">Day 10</a>
 [back to top](#top)
