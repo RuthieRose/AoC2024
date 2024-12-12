@@ -1,0 +1,11 @@
+.DS_Store
+sample.txt
+input.txt
+QuickStart.java
+sample2.txt
+input2.txt
+pom.xml
+/target
+.vscode
+aoc2024/src/main/java/com/ruthie/App.java
+aoc2024/src/test/java/com/ruthie/AppTest.java

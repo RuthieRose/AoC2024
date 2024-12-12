@@ -1,0 +1,9 @@
+.DS_Store
+./sample.txt
+./input.txt
+./QuickStart.java
+./sample2.txt
+./input2.txt
+target/
+./App.java
+./AppTest.java
