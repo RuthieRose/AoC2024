@@ -170,6 +170,7 @@ public class Day12b {
             System.out.println("This block's price is " + vertices * area);
             total += (vertices * area);            
         }
+            
             System.out.println(total);
     }
 
