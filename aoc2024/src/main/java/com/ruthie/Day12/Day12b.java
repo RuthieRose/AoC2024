@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-public class Day12 {
+public class Day12b {
 
     public static void getArea(List<List<String>> grid, int x_bound, int y_bound, HashMap<String, Integer> visited, List<List<String>> workingArea, int i,int j) {
 
@@ -110,12 +110,11 @@ public class Day12 {
         while (workingArea.size() > 0) {
             List<String> list = workingArea.remove(0);
             System.out.println(list.toString());
-            int perimeter = 0;
+            int vertices = 0;
             int area = list.size();
 
             while (list.size() > 0) {
                 String item = list.remove(0);
-                // get perimeter count
 
                 String[] xy = item.split("_");
                 int i = Integer.parseInt(xy[1]);
@@ -123,35 +122,53 @@ public class Day12 {
 
                 String plot = grid.get(i).get(j);
 
-                String leftPlot = "";
-                String rightPlot = "";
-                String topPlot = "";
-                String bottomPlot = "";
+                String left = "";
+                String right = "";
+                String top = "";
+                String bottom = "";
 
                 // get neighbor plots
-                if (j > 0) leftPlot = grid.get(i).get(j-1);
-                if (j <= x_bound - 1) rightPlot = grid.get(i).get(j+1);
-                if (i > 0) topPlot = grid.get(i-1).get(j);
-                if (i <= y_bound - 1) bottomPlot = grid.get(i+1).get(j);
+                if (j > 0) left = grid.get(i).get(j-1);
+                if (j <= x_bound - 1) right = grid.get(i).get(j+1);
+                if (i > 0) top = grid.get(i-1).get(j);
+                if (i <= y_bound - 1) bottom = grid.get(i+1).get(j);
 
-                // determine perimeter for this square 
+                // diagonals for inversions
+                String topLeft = "";
+                String topRight = "";
+                String bottomLeft = "";
+                String bottomRight = "";
 
-                if (!plot.equals(leftPlot))  { 
-                    perimeter += 1;
-                }
-                if (!plot.equals(rightPlot)) { 
-                    perimeter += 1;
-                }
-                if (!plot.equals(topPlot)) { 
-                    perimeter += 1;
-                }
-                if (!plot.equals(bottomPlot)) {
-                    perimeter += 1;
-                }
+                if (i > 0 && j > 0) topLeft = grid.get(i-1).get(j-1);
+                if (i <= y_bound - 1 && j <= x_bound - 1) bottomRight = grid.get(i+1).get(j+1);
+                if (i > 0 && j <= x_bound - 1) topRight = grid.get(i-1).get(j+1);
+                if (i <= y_bound - 1 && j > 0) bottomLeft = grid.get(i+1).get(j-1);
 
+                if (!plot.equals(left) && !plot.equals(top) && !plot.equals(topLeft)) vertices += 1;
+
+                if (!plot.equals(top) && !plot.equals(topRight) && !plot.equals(right)) vertices += 1;
+
+                if (!plot.equals(bottom) && !plot.equals(bottomLeft) && !plot.equals(left)) vertices += 1;
+
+                if (!plot.equals(bottom) && !plot.equals(bottomRight) && !plot.equals(right)) vertices += 1;
+
+                if (plot.equals(left) && plot.equals(bottom) && !plot.equals(bottomLeft)) vertices += 1;
+
+                if (plot.equals(right) && plot.equals(bottom) && !plot.equals(bottomRight)) vertices += 1;
+
+                if (plot.equals(top) && plot.equals(right) && !plot.equals(topRight)) vertices += 1;
+
+                if (plot.equals(top) && plot.equals(left) && !plot.equals(topLeft)) vertices += 1;
+
+                if (plot.equals(topRight) && !plot.equals(right) && !plot.equals(top)) vertices += 2;
+
+                if (plot.equals(topLeft) && !plot.equals(top) && !plot.equals(left)) vertices += 2;              
+                
             }
-
-            total += (perimeter * area);
+            
+            System.out.println("This block has " + vertices + " vertices and an area of " + area);
+            System.out.println("This block's price is " + vertices * area);
+            total += (vertices * area);            
         }
             System.out.println(total);
     }

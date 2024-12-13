@@ -142,7 +142,11 @@ Part 1 was too easy, that meant part 2 would give an out of memory error. :D I d
 At this point I've now done better than last year so now I'm chasing down 2022!! Let's go!!
 
 [back to top](#top)
+
 ## <a name="day12">Day 12</a>
+
+I just really thought I had great ideas today and then spent every spare moment debugging. I even thought of the corners == edges without seeing any hints!! I just can't code apparently. :D :D :D My part 2 works on ALL the smaple inputs and not the real input!! Oh well...
+
 [back to top](#top)
 ## <a name="day13">Day 13</a>
 [back to top](#top)
