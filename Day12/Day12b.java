@@ -84,7 +84,7 @@ public class Day12b {
         HashMap<String,Integer> visited = new HashMap<>();
         List<List<String>> workingArea = new ArrayList<>();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/java/com/ruthie/Day12/input.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("Day12/input.txt"))) {
             while(reader.ready()) {
                 String line = reader.readLine();
                 String[] arr = line.split("");
@@ -160,9 +160,13 @@ public class Day12b {
 
                 if (plot.equals(top) && plot.equals(left) && !plot.equals(topLeft)) vertices += 1;
 
-                if (plot.equals(topRight) && !plot.equals(right) && !plot.equals(top)) vertices += 2;
+                if (plot.equals(topRight) && !plot.equals(right) && !plot.equals(top)) vertices += 1;
 
-                if (plot.equals(topLeft) && !plot.equals(top) && !plot.equals(left)) vertices += 2;              
+                if (plot.equals(topLeft) && !plot.equals(top) && !plot.equals(left)) vertices += 1;         
+                
+                if (plot.equals(bottomLeft) && !plot.equals(bottom) && !plot.equals(left)) vertices += 1;
+
+                if (plot.equals(bottomRight) && !plot.equals(bottom) && !plot.equals(right)) vertices += 1;
                 
             }
             

@@ -4,8 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 
 public class Day13 {
@@ -16,7 +14,7 @@ public class Day13 {
 
         List<String> input = new ArrayList<String>();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/java/com/ruthie/Day13/input.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("Day13/input.txt"))) {
             while(reader.ready()) {
                 String line = reader.readLine();
                 input.add(line);

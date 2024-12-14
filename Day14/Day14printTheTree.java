@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 
 
@@ -22,8 +21,6 @@ public class Day14printTheTree {
         }
         List<int[]> coordinates = new ArrayList<int[]>();
 
-        int total = 0;
-
         String filename = "Day14/input.txt";
 
         int x_bound_sample = 10;
@@ -32,30 +29,18 @@ public class Day14printTheTree {
         int x_bound_input = 100;
         int y_bound_input = 102;
 
-        int x_median_sample = 5;
-        int y_median_sample = 3;
-
-        int x_median_input = 50;
-        int y_median_input = 51;
-
         int x_bound = -1;
         int y_bound = -1;
-        int x_median = -1;
-        int y_median = -1;
 
         if (filename.contains("sample")) {
             x_bound = x_bound_sample;
             y_bound = y_bound_sample;
-            x_median = x_median_sample;
-            y_median = y_median_sample;
         }
 
-        else if (filename.contains("input")) {{
+        else if (filename.contains("input")) {
             x_bound = x_bound_input;
             y_bound = y_bound_input;
-            x_median = x_median_input;
-            y_median = y_median_input;
-        }}
+        }
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
             while(reader.ready()) {
