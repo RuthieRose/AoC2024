@@ -159,7 +159,7 @@ Part 2 was kinda silly & kinda fun... BIG DECIMAL for real this time lol.
 
 ## <a name="day14">Day 14</a>
 
-I figured part 1 out super fast. For part 2 I knew I didn't know anywhere near enough to arrive at this so I used this explanation to help and sure enough, when I made the input arrays high enough, I got the correct answer. 
+I figured part 1 out super fast. For part 2 I knew I didn't know anywhere near enough to arrive at this so I used this explanation [https://www.reddit.com/r/adventofcode/comments/1he0g67/2024_day_14_part_2_the_clue_was_in_part_1/] to help and sure enough, when I made the input arrays high enough, I got the correct answer. 
 
 Since I didn't look for the tree by visualizing it at each iteration I made another file to create the tree! [https://github.com/RuthieRose/AoC2024/tree/main/Day14/MerryChristmas.txt]
 [back to top](#top)
