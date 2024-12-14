@@ -7,5 +7,9 @@ input2.txt
 pom.xml
 /target
 .vscode
-aoc2024/src/main/java/com/ruthie/App.java
-aoc2024/src/test/java/com/ruthie/AppTest.java
+App.java
+sample3.txt
+sample4.txt
+Day12c.java
+sample1-5.txt
+sample5.txt
