@@ -145,7 +145,9 @@ At this point I've now done better than last year so now I'm chasing down 2022!!
 
 ## <a name="day12">Day 12</a>
 
-I just really thought I had great ideas today and then spent every spare moment debugging. I even thought of the corners == edges without seeing any hints!! I just can't code apparently. :D :D :D My part 2 works on ALL the smaple inputs and not the real input!! Oh well...
+I just really thought I had great ideas today and then spent every spare moment debugging. I even thought of the corners == edges without seeing any hints!! I just can't code apparently. :D :D :D 
+
+TALK ABOUT CORNER CASES. For the tricky situations where there is a match on diagonal, I had to plot it from each position in a four-grid. Wild. Anyhoo, 2 days later and it's done.
 
 [back to top](#top)
 
@@ -163,7 +165,11 @@ I figured part 1 out super fast. For part 2 I knew I didn't know anywhere near e
 
 Since I didn't look for the tree by visualizing it at each iteration I made another file to create the tree! [https://github.com/RuthieRose/AoC2024/tree/main/Day14/MerryChristmas.txt]
 [back to top](#top)
+
 ## <a name="day15">Day 15</a>
+
+I was fairly happy with my solution for Part 1 but Part 2 just was too much today around everything else. I will go back and attempt this later. The moving both partners at once is defeating my efforts to break it down into smaller problems, but I will get there! Super happy with my effort the first 15 days and we will see how things go from here. I'm now at 29 stars which is the most I've earned on any Advent of Code so far. 
+
 [back to top](#top)
 ## <a name="day16">Day 16</a>
 [back to top](#top)

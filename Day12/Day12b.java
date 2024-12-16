@@ -84,7 +84,7 @@ public class Day12b {
         HashMap<String,Integer> visited = new HashMap<>();
         List<List<String>> workingArea = new ArrayList<>();
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("Day12/input.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("Day12/sample.txt"))) {
             while(reader.ready()) {
                 String line = reader.readLine();
                 String[] arr = line.split("");
